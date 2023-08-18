@@ -31,7 +31,7 @@ export class AxiosService {
     try {
       const { data } = await this.restCatsApi.get('/v1/favourites', {
         params: {
-          sub_id: this.configService.get<string>('CAT_API_SUB'),
+          sub_id: 'Ache',
         },
       });
       return data;
