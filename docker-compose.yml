@@ -1,0 +1,14 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mi-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MGUSER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MGPASSWORD}
+      - MONGO_INITDB_DATABASE=${MGDATABASE}
+    ports:
+      - ${MGPORT}:${MGPORT}
+    volumes:
+      - data_mongo:/var/lib/mongodb/data
+volumes:
+  data_mongo:
