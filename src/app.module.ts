@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import { validationSchema } from './settings/validation';
 import { CatsModule } from './cats/cats.module';
+import { ImagesModule } from './images/images.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -13,6 +14,7 @@ import { CatsModule } from './cats/cats.module';
     }),
     DatabaseModule,
     CatsModule,
+    ImagesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
