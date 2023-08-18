@@ -10,5 +10,6 @@ export const validationSchema = Joi.object({
   MGPASSWORD: Joi.string().required(),
   MGDATABASE: Joi.string().required(),
   MG_URI: Joi.string().required(),
+  CAT_API_HOST: Joi.string().required(),
   CAT_API_KEY: Joi.string().required(),
 });
